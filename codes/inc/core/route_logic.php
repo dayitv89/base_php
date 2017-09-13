@@ -21,7 +21,7 @@
       redirect(ROOTPAGE);
     } else {
       foreach ($GLOBALS['routes'] as $value) {
-        if (preg_match("#^$paths[0]#", $value['route']) === 1) {
+        if ($paths[0] == explode('/', $value['route'])[0]) {
           $params = explode('/', $value['route']);
           for ($i = 1; $i < count($params); $i++) {
             $_GET[ltrim($params[$i], ':')] = $paths[$i];
