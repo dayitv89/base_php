@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /base_php/codes
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php|public|res|robots\.txt)
+RewriteRule ^(.*)$ index.php?_path_=$1 [L,QSA]
+
+ErrorDocument 404 /index.php?_error_=404.php
+ErrorDocument 500 /index.php?_error_=500.php
