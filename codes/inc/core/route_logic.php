@@ -26,7 +26,7 @@
           for ($i = 1; $i < count($params); $i++) {
             $_GET[ltrim($params[$i], ':')] = $paths[$i];
           }
-          redirect($value['redirect'] . '.php', $value['includeSrc']);
+          redirect($value['redirect'], $value['includeSrc']);
         }
       }
     }

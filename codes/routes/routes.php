@@ -1,8 +1,8 @@
 <?php
 
   /// define routes
-  setRoute('page', 'page');
-  setRoute('anotherpage/:id', 'anotherpage');
-  setRoute('yetanotherpage/:id/:somedata', 'yetanotherpage');
+  setRoute('page', 'page.php');
+  setRoute('anotherpage/:id', 'anotherpage.php');
+  setRoute('yetanotherpage/:id/:somedata', 'yetanotherpage.php');
 
 ?>
