@@ -6,5 +6,6 @@
   require_once('error/index.php');
 
   /// Handle routes to go
-  route($_GET['_path_']);
+  $path = $_GET['_path_'] ?? '';
+  route($path);
 ?>
